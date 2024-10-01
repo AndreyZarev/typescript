@@ -1,5 +1,5 @@
 
 export const user = {
     name: 'John',
-    age: 
+    age: 2
 }
