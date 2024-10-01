@@ -2,5 +2,5 @@
 export const user = {
     name: 'John',
     age: 2,
-    hair: blond
+    hair: "blond"
 }
