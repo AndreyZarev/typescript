@@ -1,3 +1,6 @@
 const instance: number = 5
 
-if (this instance === 0 )
+if (instance === 0) {
+    console.log(instance);
+
+}
