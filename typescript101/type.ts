@@ -1,6 +1,3 @@
-let instance: number
-instance = 5
+const num: number = 5
 
-if (instance === 0) {
-    console.log(instance);
-}
+console.log(5 + num);
