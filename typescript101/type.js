@@ -1,2 +1,2 @@
-var numb = 5;
+numb = 5;
 console.log(5);
