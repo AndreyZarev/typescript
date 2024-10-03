@@ -1,2 +1,2 @@
-var num = 5;
-console.log(5 + num);
+var numb = 5;
+console.log(5);
