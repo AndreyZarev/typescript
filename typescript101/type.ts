@@ -1,3 +1,3 @@
-let num = 5
+let numb: number = 5
 
 console.log(5);
