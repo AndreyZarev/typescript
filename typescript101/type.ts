@@ -1,3 +1,3 @@
-const num = 5
+let num = 5
 
-console.log(5 + num);
+console.log(5);
