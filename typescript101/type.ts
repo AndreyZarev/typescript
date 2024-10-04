@@ -8,3 +8,5 @@ arr.forEach(arr => {
 )
 
 const arrNum: Array<number> = [1, 2, 3, 4, 5]
+
+const bulArray: Array<boolean> = [true, false, true, false]
