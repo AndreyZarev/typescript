@@ -1,4 +1,4 @@
-function sumBetween(num1: string, num2: string) {
+function sumBetween(num1: string, num2: string): number {
     let sum: number = 0;
     let num1N = Number(num1)
     let num2N = Number(num2)
@@ -9,6 +9,8 @@ function sumBetween(num1: string, num2: string) {
 
     }
     console.log(sum);
+
+    return sum
 
 }
 sumBetween("1", "5");
