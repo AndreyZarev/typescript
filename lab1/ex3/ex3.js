@@ -7,6 +7,7 @@ function sumBetween(num1, num2) {
         sum += value;
     }
     console.log(sum);
+    return sum;
 }
 sumBetween("1", "5");
 sumBetween("-8", "20");
