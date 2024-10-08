@@ -1,7 +1,7 @@
 function evenPossitions(arr) {
     var sum = 0;
     for (var index = 0; index <= arr.length; index++) {
-        if (index % 2 !== 0) {
+        if (index % 2 === 0) {
             var element = Number(arr[index]);
             sum += element;
         }
