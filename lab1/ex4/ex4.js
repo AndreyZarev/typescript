@@ -1,13 +1,13 @@
-function sumBetween(num1, num2) {
+function evenPossitions(arr) {
     var sum = 0;
-    var num1N = Number(num1);
-    var num2N = Number(num2);
-    for (var index = num1N; index <= num2N; index++) {
-        var value = index;
-        sum += value;
+    for (var index = 0; index <= arr.length; index++) {
+        if (index % 2 !== 0) {
+            var element = Number(arr[index]);
+            sum += element;
+        }
     }
     console.log(sum);
     return sum;
 }
-sumBetween("1", "5");
-sumBetween("-8", "20");
+evenPossitions(["20", "30", "40", "50", "60"]);
+evenPossitions(["-8", "20"]);
