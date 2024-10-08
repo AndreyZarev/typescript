@@ -1,4 +1,4 @@
-function sumBetween(num1: string, num2: string): number {
+function evenPossitions(num1: string, num2: string): number {
     let sum: number = 0;
     let num1N = Number(num1)
     let num2N = Number(num2)
@@ -13,5 +13,5 @@ function sumBetween(num1: string, num2: string): number {
     return sum
 
 }
-sumBetween("1", "5");
-sumBetween("-8", "20");
+evenPossitions("1", "5");
+evenPossitions("-8", "20");
