@@ -1,11 +1,10 @@
 function evenPossitions(arr: Array<string>) {
-    let sum: number = 0;
-    let num1N = Number(num1)
-    let num2N = Number(num2)
-    for (let index = num1N; index <= num2N; index++) {
-        let value = index
-        sum += value
+    let sum = 0
+    for (let index = 0; index <= arr.length; index++) {
+        if (index % 2 !== 0) {
 
+        }
+        let element = Number(arr[index])
 
     }
     console.log(sum);
