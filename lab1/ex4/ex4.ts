@@ -1,4 +1,4 @@
-function evenPossitions(num1: string, num2: string): number {
+function evenPossitions(arr: Array<string>) {
     let sum: number = 0;
     let num1N = Number(num1)
     let num2N = Number(num2)
@@ -13,5 +13,5 @@ function evenPossitions(num1: string, num2: string): number {
     return sum
 
 }
-evenPossitions("1", "5");
-evenPossitions("-8", "20");
+evenPossitions(["20", "30", "40", "50", "60"]);
+evenPossitions(["-8", "20"]);
