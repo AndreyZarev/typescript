@@ -1,11 +1,12 @@
 function evenPossitions(arr) {
-    var sum = 0;
-    for (var index = 0; index <= arr.length; index++) {
+    var sum = "";
+    for (var index = 0; index < arr.length; index++) {
         if (index % 2 === 0) {
-            var element = Number(arr[index]);
-            sum += element;
+            var element = arr[index];
+            sum += element + " ";
         }
     }
+    sum = sum.trim();
     console.log(sum);
     return sum;
 }
