@@ -21,21 +21,35 @@ function inventory(arr: string[]) {
         const numB = parseInt(b[1].trim(), 10);
         return numA - numB; // Sort in ascending order
     });
-    let final = resultArray.join(",").split(",");
 
-    return final
+    for (let index = 0; index < resultArray.length; index++) {
+        const elementArr = resultArray[index];
+
+        for (let i = 0; i < elementArr.length; i++) {
+            const element = elementArr[i];
+            if (i === 0) {
+                console.log(`Hero: ${element.trim()}`);
+
+            }
+        }
+
+    }
+
+    // let final = resultArray.join(",").split(",");
+
+    return resultArray
 }
 
 
 
 
 
-console.log(inventory([
+inventory([
     'Isacc / 25 / Apple, GravityGun',
     'Derek / 12 / BarrelVest, DestructionSword',
     'Hes / 1 / Desolator, Sentinel, Antara'
 ]
-));
+)
 
 // Hero: Hes
 // level => 1
