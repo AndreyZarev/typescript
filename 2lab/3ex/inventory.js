@@ -14,14 +14,29 @@ function inventory(arr) {
         var numB = parseInt(b[1].trim(), 10);
         return numA - numB; // Sort in ascending order
     });
-    var final = resultArray.join(",").split(",");
-    return final;
+    for (var index = 0; index < resultArray.length; index++) {
+        var elementArr = resultArray[index];
+        for (var i = 0; i < elementArr.length; i++) {
+            var element = elementArr[i];
+            if (i === 0) {
+                console.log("Hero: ".concat(element.trim()));
+            }
+            else if (i === 1) {
+                console.log("level => ".concat(element.trim()));
+            }
+            else {
+                console.log("items => ".concat(element.trim()));
+            }
+        }
+    }
+    // let final = resultArray.join(",").split(",");
+    return resultArray;
 }
-console.log(inventory([
+inventory([
     'Isacc / 25 / Apple, GravityGun',
     'Derek / 12 / BarrelVest, DestructionSword',
     'Hes / 1 / Desolator, Sentinel, Antara'
-]));
+]);
 // Hero: Hes
 // level => 1
 // items => Desolator, Sentinel, Antara
