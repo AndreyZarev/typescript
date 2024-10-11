@@ -30,6 +30,12 @@ function inventory(arr: string[]) {
             if (i === 0) {
                 console.log(`Hero: ${element.trim()}`);
 
+            } else if (i === 1) {
+                console.log(`level => ${element.trim()}`);
+
+            } else {
+                console.log(`items => ${element.trim()}`);
+
             }
         }
 
@@ -48,8 +54,7 @@ inventory([
     'Isacc / 25 / Apple, GravityGun',
     'Derek / 12 / BarrelVest, DestructionSword',
     'Hes / 1 / Desolator, Sentinel, Antara'
-]
-)
+])
 
 // Hero: Hes
 // level => 1
