@@ -4,7 +4,10 @@ function persons(firstName: string, lastName: string, age: string): object {
     obj["firstName"] = firstName
     obj["lastName"] = lastName
     obj["age"] = age
+    Object.(persons).forEach(key => {
+        console.log();
 
+    });
     return obj
 }
 
