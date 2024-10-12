@@ -41,7 +41,7 @@ function inventory(arr: string[]) {
 
     }
 
-    // let final = resultArray.join(",").split(",");
+    let final = resultArray.join(",").split(",");
 
     return resultArray
 }
