@@ -4,4 +4,3 @@ function calc(num1, num2) {
 calc(5, 7);
 calc(6, 8);
 
-lk;lk;
