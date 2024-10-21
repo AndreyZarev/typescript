@@ -334,38 +334,36 @@
 //   bs: string;
 // }
 // // Dependancy Inversion (Principle) -> Dependency Injection (Pattern)
-// class Wallet {
-//   balance: number;
-//   //   currency: string;
-//   constructor(balance: number) {
-//     this.balance = balance;
-//     // this.currency = currency;
-//   }
-// }
-// class Course {
-//   courses: string;
-//   constructor(courses: string) {
-//     this.courses = courses;
-//   }
-// }
-// class User {
-//   username: string;
-//   wallet: Wallet;
-//   course: Course;
-//   constructor(username: string, wallet: Wallet, courses: Course) {
-//     this.username = username;
-//     this.wallet = wallet;
-//     this.course = courses;
-//   }
-// }
-// const ivansWallet = new Wallet(400);
-// const ivansCourses = new Course("Programming Basics");
-// const ivanUser = new User("vankata92", ivansWallet, ivansCourses);
-// console.log(ivanUser.wallet.balance);
-// const mariasWallet = new Wallet(3400);
-// const mariasCourses = new Course("Programming Advanced");
-// const mariasUser = new User("maria", mariasWallet, mariasCourses);
-// console.log(mariasUser.wallet.balance);
+var Wallet = /** @class */ (function () {
+    //   currency: string;
+    function Wallet(balance) {
+        this.balance = balance;
+        // this.currency = currency;
+    }
+    return Wallet;
+}());
+var Course = /** @class */ (function () {
+    function Course(courses) {
+        this.courses = courses;
+    }
+    return Course;
+}());
+var User = /** @class */ (function () {
+    function User(username, wallet, courses) {
+        this.username = username;
+        this.wallet = wallet;
+        this.course = courses;
+    }
+    return User;
+}());
+var ivansWallet = new Wallet(400);
+var ivansCourses = new Course("Programming Basics");
+var ivanUser = new User("vankata92", ivansWallet, ivansCourses);
+console.log(ivanUser.wallet.balance);
+var mariasWallet = new Wallet(3400);
+var mariasCourses = new Course("Programming Advanced");
+var mariasUser = new User("maria", mariasWallet, mariasCourses);
+console.log(mariasUser.wallet.balance);
 // THE WORST PRACTICE
 // class User {
 //   username: string;
@@ -398,27 +396,22 @@
 // const p2 = new Person();
 // const p3 = new Person();
 // console.log(Person.personInitiatedCount);
-var Person = /** @class */ (function () {
-    function Person() {
-        this.id = "asdksahkjdhsa";
-    }
-    Object.defineProperty(Person.prototype, "fullName", {
-        get: function () {
-            console.log("getter invoked");
-            // INVOKE FUNTIONALITY ON READ
-            return this._fullName;
-        },
-        set: function (fName) {
-            console.log("setter invoked");
-            // VALIDATINF INPUT
-            this._fullName = fName;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return Person;
-}());
-var p = new Person();
-// p.id = 123;
-p.fullName = "Ivan Kirov";
-console.log(p.fullName);
+// class Person {
+//   readonly id = "asdksahkjdhsa";
+//   private _fullName;
+//   constructor() { }
+//   get fullName(): string {
+//     console.log("getter invoked");
+//     // INVOKE FUNTIONALITY ON READ
+//     return this._fullName;
+//   }
+//   set fullName(fName: string) {
+//     console.log("setter invoked");
+//     // VALIDATINF INPUT
+//     this._fullName = fName;
+//   }
+// }
+// const p = new Person();
+// // p.id = 123;
+// p.fullName = "Ivan Kirov";
+// console.log(p.fullName);
