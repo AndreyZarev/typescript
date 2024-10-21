@@ -414,45 +414,45 @@
 // }
 
 // // Dependancy Inversion (Principle) -> Dependency Injection (Pattern)
-// class Wallet {
-//   balance: number;
-//   //   currency: string;
+class Wallet {
+  balance: number;
+  //   currency: string;
 
-//   constructor(balance: number) {
-//     this.balance = balance;
-//     // this.currency = currency;
-//   }
-// }
+  constructor(balance: number) {
+    this.balance = balance;
+    // this.currency = currency;
+  }
+}
 
-// class Course {
-//   courses: string;
-//   constructor(courses: string) {
-//     this.courses = courses;
-//   }
-// }
+class Course {
+  courses: string;
+  constructor(courses: string) {
+    this.courses = courses;
+  }
+}
 
-// class User {
-//   username: string;
-//   wallet: Wallet;
-//   course: Course;
+class User {
+  username: string;
+  wallet: Wallet;
+  course: Course;
 
-//   constructor(username: string, wallet: Wallet, courses: Course) {
-//     this.username = username;
-//     this.wallet = wallet;
-//     this.course = courses;
-//   }
-// }
+  constructor(username: string, wallet: Wallet, courses: Course) {
+    this.username = username;
+    this.wallet = wallet;
+    this.course = courses;
+  }
+}
 
-// const ivansWallet = new Wallet(400);
-// const ivansCourses = new Course("Programming Basics");
-// const ivanUser = new User("vankata92", ivansWallet, ivansCourses);
-// console.log(ivanUser.wallet.balance);
+const ivansWallet = new Wallet(400);
+const ivansCourses = new Course("Programming Basics");
+const ivanUser = new User("vankata92", ivansWallet, ivansCourses);
+console.log(ivanUser.wallet.balance);
 
-// const mariasWallet = new Wallet(3400);
-// const mariasCourses = new Course("Programming Advanced");
-// const mariasUser = new User("maria", mariasWallet, mariasCourses);
+const mariasWallet = new Wallet(3400);
+const mariasCourses = new Course("Programming Advanced");
+const mariasUser = new User("maria", mariasWallet, mariasCourses);
 
-// console.log(mariasUser.wallet.balance);
+console.log(mariasUser.wallet.balance);
 
 // THE WORST PRACTICE
 // class User {
@@ -493,26 +493,26 @@
 // const p3 = new Person();
 // console.log(Person.personInitiatedCount);
 
-class Person {
-  readonly id = "asdksahkjdhsa";
-  private _fullName;
-  constructor() { }
+// class Person {
+//   readonly id = "asdksahkjdhsa";
+//   private _fullName;
+//   constructor() { }
 
-  get fullName(): string {
-    console.log("getter invoked");
-    // INVOKE FUNTIONALITY ON READ
-    return this._fullName;
-  }
+//   get fullName(): string {
+//     console.log("getter invoked");
+//     // INVOKE FUNTIONALITY ON READ
+//     return this._fullName;
+//   }
 
-  set fullName(fName: string) {
-    console.log("setter invoked");
-    // VALIDATINF INPUT
-    this._fullName = fName;
-  }
-}
+//   set fullName(fName: string) {
+//     console.log("setter invoked");
+//     // VALIDATINF INPUT
+//     this._fullName = fName;
+//   }
+// }
 
-const p = new Person();
-// p.id = 123;
+// const p = new Person();
+// // p.id = 123;
 
-p.fullName = "Ivan Kirov";
-console.log(p.fullName);
+// p.fullName = "Ivan Kirov";
+// console.log(p.fullName);
