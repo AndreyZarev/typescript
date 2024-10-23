@@ -1,5 +1,5 @@
-var Department = /** @class */ (function () {
-    function Department(name, salary, position, department, email, age) {
+class Department {
+    constructor(name, salary, position, department, email, age) {
         this.name = name;
         this.salary = salary;
         this.position = position;
@@ -7,12 +7,11 @@ var Department = /** @class */ (function () {
         this.email = email;
         this.age = age;
     }
-    return Department;
-}());
+}
 function departmentsPay(n, arr) {
-    var final = [];
-    for (var index = 0; index < n; index++) {
-        var l = arr[index];
+    let final = [];
+    for (let index = 0; index < n; index++) {
+        let l = arr[index];
         //     let [name, salary, position, department, email, age] = arr[index]
         //     const classI = new Department(name, salary, position, department, email, age)
         // }
