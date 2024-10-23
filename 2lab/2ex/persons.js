@@ -1,8 +1,11 @@
 function persons(firstName, lastName, age) {
-    var obj = {};
+    let obj = {};
     obj["firstName"] = firstName;
     obj["lastName"] = lastName;
     obj["age"] = age;
+    Object.(persons).forEach(key => {
+        console.log();
+    });
     return obj;
 }
 console.log(persons("Peter", "Pan", "20"));
