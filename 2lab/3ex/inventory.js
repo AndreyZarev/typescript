@@ -1,31 +1,31 @@
 function inventory(arr) {
-    var resultArray = [];
-    for (var index = 0; index < arr.length; index++) {
-        var _a = arr[index].split("/"), hero = _a[0], level = _a[1], items = _a[2];
-        var array = "".concat(hero, "/ ").concat(level, "/ ").concat(items).split("/");
+    let resultArray = [];
+    for (let index = 0; index < arr.length; index++) {
+        const [hero, level, items] = arr[index].split("/");
+        let array = `${hero}/ ${level}/ ${items}`.split("/");
         // `Hero: ${hero}/ Level => ${level}/ Items => ${items}`.split("/")
         resultArray.push(array);
         // resultArray.push(`Hero: ${hero}`)
         // resultArray.push(`Level => ${level}`)
         // resultArray.push(`Items => ${items}`)
     }
-    resultArray = resultArray.sort(function (a, b) {
-        var numA = parseInt(a[1].trim(), 10); // Trim and convert to number
-        var numB = parseInt(b[1].trim(), 10);
+    resultArray = resultArray.sort((a, b) => {
+        const numA = parseInt(a[1].trim(), 10); // Trim and convert to number
+        const numB = parseInt(b[1].trim(), 10);
         return numA - numB; // Sort in ascending order
     });
-    for (var index = 0; index < resultArray.length; index++) {
-        var elementArr = resultArray[index];
-        for (var i = 0; i < elementArr.length; i++) {
-            var element = elementArr[i];
+    for (let index = 0; index < resultArray.length; index++) {
+        const elementArr = resultArray[index];
+        for (let i = 0; i < elementArr.length; i++) {
+            const element = elementArr[i];
             if (i === 0) {
-                console.log("Hero: ".concat(element.trim()));
+                console.log(`Hero: ${element.trim()}`);
             }
             else if (i === 1) {
-                console.log("level => ".concat(element.trim()));
+                console.log(`level => ${element.trim()}`);
             }
             else {
-                console.log("items => ".concat(element.trim()));
+                console.log(`items => ${element.trim()}`);
             }
         }
     }
