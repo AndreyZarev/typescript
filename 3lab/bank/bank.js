@@ -1,28 +1,26 @@
-var BankAccount = /** @class */ (function () {
-    function BankAccount() {
-        var _this = this;
+class BankAccount {
+    constructor() {
         this.id = 1;
         this.balance = 0;
-        this.getInterest = function (transaction, id, years) {
-            var total = 0;
-            for (var index = 0; index < years; index++) {
-                var element = _this.balance * 0.02;
+        this.getInterest = (transaction, id, years) => {
+            let total = 0;
+            for (let index = 0; index < years; index++) {
+                const element = this.balance * 0.02;
                 total += element;
             }
             console.log(Math.round(total).toFixed(2));
         };
-        this.deposit = function (transaction, id, amount) {
-            console.log("Deposited ".concat(amount, " to ID").concat(id));
-            _this.balance += amount;
+        this.deposit = (transaction, id, amount) => {
+            console.log(`Deposited ${amount} to ID${id}`);
+            this.balance += amount;
         };
-        this.create = function () {
-            console.log("Account ID".concat(_this.id, " created"));
-            _this.id += 1;
+        this.create = () => {
+            console.log(`Account ID${this.id} created`);
+            this.id += 1;
         };
     }
-    return BankAccount;
-}());
-var newUser = new BankAccount();
+}
+const newUser = new BankAccount();
 newUser.create();
 newUser.deposit("Deposit", 1, 20);
 newUser.getInterest("GetInterest", 1, 10);
