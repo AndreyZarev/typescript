@@ -1,10 +1,10 @@
 function colorieObj(foods) {
-    var foodNames = {};
-    for (var index = 0; index <= foods.length; index = index + 2) {
+    let foodNames = {};
+    for (let index = 0; index <= foods.length; index = index + 2) {
         if (foods.length <= index) {
             return foodNames;
         }
-        var num = Number(foods[index + 1]);
+        let num = Number(foods[index + 1]);
         foodNames[foods[index]] = num;
     }
     return foodNames;
