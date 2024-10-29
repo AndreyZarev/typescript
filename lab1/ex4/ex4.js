@@ -1,8 +1,8 @@
 function evenPossitions(arr) {
-    var sum = "";
-    for (var index = 0; index < arr.length; index++) {
+    let sum = "";
+    for (let index = 0; index < arr.length; index++) {
         if (index % 2 === 0) {
-            var element = arr[index];
+            let element = arr[index];
             sum += element + " ";
         }
     }
