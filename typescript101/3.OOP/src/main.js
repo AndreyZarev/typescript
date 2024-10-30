@@ -334,35 +334,32 @@
 //   bs: string;
 // }
 // // Dependancy Inversion (Principle) -> Dependency Injection (Pattern)
-var Wallet = /** @class */ (function () {
+class Wallet {
     //   currency: string;
-    function Wallet(balance) {
+    constructor(balance) {
         this.balance = balance;
         // this.currency = currency;
     }
-    return Wallet;
-}());
-var Course = /** @class */ (function () {
-    function Course(courses) {
+}
+class Course {
+    constructor(courses) {
         this.courses = courses;
     }
-    return Course;
-}());
-var User = /** @class */ (function () {
-    function User(username, wallet, courses) {
+}
+class User {
+    constructor(username, wallet, courses) {
         this.username = username;
         this.wallet = wallet;
         this.course = courses;
     }
-    return User;
-}());
-var ivansWallet = new Wallet(400);
-var ivansCourses = new Course("Programming Basics");
-var ivanUser = new User("vankata92", ivansWallet, ivansCourses);
+}
+const ivansWallet = new Wallet(400);
+const ivansCourses = new Course("Programming Basics");
+const ivanUser = new User("vankata92", ivansWallet, ivansCourses);
 console.log(ivanUser.wallet.balance);
-var mariasWallet = new Wallet(3400);
-var mariasCourses = new Course("Programming Advanced");
-var mariasUser = new User("maria", mariasWallet, mariasCourses);
+const mariasWallet = new Wallet(3400);
+const mariasCourses = new Course("Programming Advanced");
+const mariasUser = new User("maria", mariasWallet, mariasCourses);
 console.log(mariasUser.wallet.balance);
 // THE WORST PRACTICE
 // class User {
