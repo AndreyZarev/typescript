@@ -1,9 +1,9 @@
-var numb = 5;
-var arr = ['asds', 'asd', 'dsda'];
-arr.forEach(function (arr) {
+let numb = 5;
+const arr = ['asds', 'asd', 'dsda'];
+arr.forEach(arr => {
     console.log(arr);
 });
-var arrNum = [1, 2, 3, 4, 5];
+const arrNum = [1, 2, 3, 4, 5];
 console.log(arrNum);
-var bulArray = [true, false, true, false];
+const bulArray = [true, false, true, false];
 console.log(bulArray);
